@@ -1,6 +1,8 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>
+      Venari (lat. "hunt") is designed to provide me an outlet for my passion of riddles and trivia.
+    </h1>
   </div>
 </template>
 
