@@ -14,16 +14,6 @@ export default {
 }
 </script>
 <template>
-  <div class="api">
-    <button @click="store.fetchHunts">Press me</button>
-    <h1>{{store.hunts}}</h1>
-  </div>
+  <button @click="store.fetchHunts">Press me</button>
+  <h1>{{store.hunts}}</h1>
 </template>
-
-<style>
-@media (min-width: 1024px) {
-  .api {
-    align-items: center;
-  }
-}
-</style>
