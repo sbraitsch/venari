@@ -14,7 +14,6 @@ class VenariSecurityConfiguration {
         http.authorizeHttpRequests {
                 auth -> auth.mvcMatchers("/v1/**").permitAll() }
             .httpBasic(Customizer.withDefaults())
-            .cors().disable()
         return http.build()
     }
 }
