@@ -1,35 +1,31 @@
 @import "./base.css";
 
-#app {
+#content {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: auto;
   padding: 2rem;
-
   font-weight: normal;
-}
-
-a,
-.brown {
-  text-decoration: none;
-  color: rgb(161, 114, 43);
-  transition: 0.4s;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    color: hsl(352, 88%, 41%);
   }
 }
 
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
 
-  #app {
+  #content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
+    display: flex;
+    place-items: center;
+    padding-top: 100px;
+    color: white;
+  }
+  
+  body {
+    background-color: rgb(44, 41, 41);
   }
 }

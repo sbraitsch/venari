@@ -1,23 +1,20 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Grug" class="logo" src="@/assets/grug_square.png" width="175" height="175" />
+  <Navbar/>
+  <div id="content">
+    <header>
+    <img alt="Grug" class="logo" src="@/assets/grug_square.png" width="250" height="250" />
 
     <div class="wrapper">
-      <HelloWorld msg="Venari is coming" />
-
-      <nav>
-        <RouterLink to="/">Roadmap</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+      <h1>Grug want use API</h1>
     </div>
   </header>
-
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>

@@ -5,7 +5,6 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
-import IconEcosystem from './icons/IconEcosystem.vue'
 </script>
 
 <template>
@@ -41,7 +40,7 @@ import IconEcosystem from './icons/IconEcosystem.vue'
 
   <WelcomeItem>
     <template #icon>
-      <IconEcosystem />
+      <EcosystemIcon />
     </template>
     <template #heading>Companion App</template>
 
