@@ -12,6 +12,7 @@
   bottom: 0;
   width: 100%;
   text-align: center;
+  user-select: none;
 }
 
 </style>

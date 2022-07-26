@@ -7,7 +7,7 @@ export default {
 </script>
 <template>
   <div class="tile">
-    <div class="box">{{ title }}</div>
+    <div class="box"><span>{{ title }}</span></div>
   </div>
 </template>
 
@@ -46,13 +46,13 @@ export default {
   .box{
     display:flex;
     position:relative;
-    width: 10vw;
     border-collapse:collapse;
     text-decoration:none;
     padding: 10px;
     justify-content: center;
     font-size: 36px;
     font-weight: bold;
+    user-select: none;
 
     &:before{
       transition: all 1s;

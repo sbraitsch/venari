@@ -4,11 +4,11 @@ import NavigationTile from './NavigationTile.vue';
 
 <template>
   <div class="navbar">
-    <NavigationTile title="Create"/>
+    <NavigationTile title="Create NYI"/>
     <div class="vl"></div>
     <NavigationTile title="Explore"/>
     <div class="vl"></div>
-    <NavigationTile @click="$router.push('/api')" title="{ API }"/>
+    <NavigationTile @click="$router.push('/pathology')" title="Pathology"/>
   </div>
 </template>
 
