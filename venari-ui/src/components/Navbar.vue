@@ -1,9 +1,14 @@
+<script setup lang="ts">
+import NavigationTile from './NavigationTile.vue';
+</script>
 
 <template>
   <div class="navbar">
-    <h3 class="navitem">Create</h3>
-    <h3 class="navitem">Explore</h3>
-    <h3 class="navitem" @click="$router.push('/api')">{API}</h3>
+    <NavigationTile title="Create"/>
+    <div class="vl"></div>
+    <NavigationTile title="Explore"/>
+    <div class="vl"></div>
+    <NavigationTile @click="$router.push('/api')" title="{ API }"/>
   </div>
 </template>
 
@@ -11,23 +16,15 @@
 
 .navbar {
   display: flex;
+  flex-grow: 1;
   align-items: center;
-  padding: 0 2rem;
-  color: rgb(81, 167, 124);
   font-size: x-large;
-  gap: 4vw;
+  height: 100vh;
 }
 
-.navitem {
-  color: #fff;
-}
-
-.navitem:hover {
-  cursor: pointer;
-}
-
-.pushRight {
-  margin-left: auto;
+.vl {
+  height: 100%;
+  border-left: 1px solid var(--vt-c-mint-mute);
 }
 
 </style>

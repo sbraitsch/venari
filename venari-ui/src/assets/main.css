@@ -6,31 +6,38 @@
 }
 
 .neon {
-  animation: flicker 1.5s infinite alternate; 
+  animation: flicker 3s infinite alternate; 
   text-shadow:
     0 0 7px #fff,
     0 0 10px #fff,
     0 0 21px #fff,
-    0 0 42px #0fa,
-    0 0 82px #0fa,
-    0 0 92px #0fa,
-    0 0 102px #0fa,
-    0 0 151px #0fa;
+    0 0 40px var(--vt-c-neon),
+    0 0 80px var(--vt-c-neon),
+    0 0 90px var(--vt-c-neon),
+    0 0 100px var(--vt-c-neon),
+    0 0 150px var(--vt-c-neon);
+}
+
+.glow {
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff;
 }
 
 @keyframes flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  0%, 18%, 22%, 25%, 53%, 57%, 73%, 77%, 100% {
     text-shadow:
       0 0 4px #fff,
       0 0 11px #fff,
       0 0 19px #fff,
-      0 0 40px #0fa,
-      0 0 80px #0fa,
-      0 0 90px #0fa,
-      0 0 100px #0fa,
-      0 0 150px #0fa;
+      0 0 40px var(--vt-c-neon),
+      0 0 80px var(--vt-c-neon),
+      0 0 90px var(--vt-c-neon),
+      0 0 100px var(--vt-c-neon),
+      0 0 150px var(--vt-c-neon);
   }
-  20%, 24%, 55% {       
+  20%, 24%, 55%, 75% {       
     text-shadow: none;
   }
 }
@@ -38,13 +45,5 @@
 @media (hover: hover) {
   a:hover {
     color: hsl(352, 88%, 41%);
-  }
-}
-
-@media (min-width: 1024px) {
-  
-  body {
-    background-color: rgb(27, 26, 26);
-    font-family: Roboto, Helvetica, Arial, sans-serif;
   }
 }
