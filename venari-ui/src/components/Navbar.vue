@@ -6,7 +6,7 @@ import NavigationTile from './NavigationTile.vue';
   <div class="navbar">
     <NavigationTile title="Create NYI"/>
     <div class="vl"></div>
-    <NavigationTile title="Explore"/>
+    <NavigationTile @click="$router.push('/api')" title="Explore NYI"/>
     <div class="vl"></div>
     <NavigationTile @click="$router.push('/pathology')" title="Pathology"/>
   </div>
