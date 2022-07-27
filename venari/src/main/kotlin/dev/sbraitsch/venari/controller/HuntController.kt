@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("v1/hunts")
-@CrossOrigin(origins = ["http://localhost:5173", "http://localhost:3000", "https://sbraitsch.dev:3000"])
+@CrossOrigin
 class HuntController {
 
     val hunts = listOf("Nothin", "To", "See", "Yet.")
