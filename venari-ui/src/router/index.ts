@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ApiView from '../views/Api.vue'
-import PathologyVue from '@/views/Pathology.vue'
+import VenariLandingVue from '@/views/VenariLanding.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,9 +17,9 @@ const router = createRouter({
       component: ApiView
     },
     {
-      path: '/pathology',
-      name: 'pathology',
-      component: PathologyVue
+      path: '/venari',
+      name: 'venari',
+      component: VenariLandingVue
     }
   ]
 })

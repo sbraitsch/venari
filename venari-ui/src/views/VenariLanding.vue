@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import Navbar from '../components/TileView.vue';
+import Api from './Api.vue';
 </script>
 
 <template>
   <!-- <b class="neon constructionSign">Under Construction</b> -->
   <div class="content">
-    <Navbar/>
+    <Api></Api>
   </div>
 </template>
 

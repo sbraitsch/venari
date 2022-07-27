@@ -5,5 +5,4 @@ import Footer from './components/Footer.vue';
 
 <template>
   <RouterView></RouterView>
-  <Footer></Footer>
 </template>

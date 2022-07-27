@@ -11,7 +11,7 @@ export const useHuntStore = defineStore({
   actions: {
     fetchHunts() {
       axios
-        .get('https://localhost:8080/v1/hunts')
+        .get('https://sbraitsch.dev:8080/v1/hunts')
         .then( response => this.hunts = response.data)
         .catch((error) => {
           console.log(error)

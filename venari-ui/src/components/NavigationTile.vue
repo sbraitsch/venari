@@ -37,6 +37,15 @@ defineEmits(['linkExternal'])
     transition: all 1.5s;
   }
 
+  .red {
+    color: var(--vt-c-red-mute);
+  }
+
+  .red:hover {
+    background-color: var(--vt-c-red-mute);
+    transition: all 1.5s;
+  }
+
   .mint:hover {
     background-color: var(--vt-c-mint-mute);
     transition: all 1.5s;
@@ -53,7 +62,7 @@ defineEmits(['linkExternal'])
 
   @media(max-width: 1024px) {
     .vl {
-        border-bottom: 1px solid var(--vt-c-mint-mute);
+        border-bottom: 1px solid var(--vt-c-divider-dark-1);
         border-left: none;
         width: 100%;
         height: 1px !important;
