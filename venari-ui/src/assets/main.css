@@ -41,9 +41,3 @@
     text-shadow: none;
   }
 }
-
-@media (hover: hover) {
-  a:hover {
-    color: hsl(352, 88%, 41%);
-  }
-}

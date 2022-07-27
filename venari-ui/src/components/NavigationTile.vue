@@ -1,14 +1,21 @@
-<script lang="ts">
-export default {
-  props: {
-    title: String
-  }
-}
+<script setup lang="ts">
+
+const props = defineProps({
+  title: String,
+    route: String,
+    rightBorder: Boolean,
+    leftBorder: Boolean,
+    color: String
+})
+defineEmits(['linkExternal'])
 </script>
+
 <template>
-  <div class="tile">
+  <div class="vl" v-if="leftBorder"></div>
+  <div class="tile" :class="color" @click="$emit('linkExternal')">
     <div class="box"><span>{{ title }}</span></div>
   </div>
+  <div class="vl" v-if="rightBorder"></div>
 </template>
 
 <style lang="scss">
@@ -21,9 +28,44 @@ export default {
     cursor: pointer;
   }
 
-  .tile:hover {
+  .beige {
+    color: beige;
+  }
+
+  .beige:hover {
+    background-color: beige;
+    transition: all 1.5s;
+  }
+
+  .mint:hover {
     background-color: var(--vt-c-mint-mute);
     transition: all 1.5s;
+  }
+
+  .slate {
+    color: slategray;
+  }
+
+  .slate:hover {
+    background-color: slategray;
+    transition: all 1.5s;
+  }
+
+  @media(max-width: 1024px) {
+    .vl {
+        border-bottom: 1px solid var(--vt-c-mint-mute);
+        border-left: none;
+        width: 100%;
+        height: 1px !important;
+    }
+    .tile {
+      width: 100%;
+    }
+  }
+
+  .vl {
+  height: 100%;
+  border-left: 1px solid var(--vt-c-divider-dark-1);
   }
 
   .tile:hover > .box {
