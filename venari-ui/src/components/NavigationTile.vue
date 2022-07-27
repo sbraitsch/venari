@@ -3,19 +3,15 @@
 const props = defineProps({
   title: String,
     route: String,
-    rightBorder: Boolean,
-    leftBorder: Boolean,
     color: String
 })
 defineEmits(['linkExternal'])
 </script>
 
 <template>
-  <div class="vl" v-if="leftBorder"></div>
   <div class="tile" :class="color" @click="$emit('linkExternal')">
-    <div class="box"><span>{{ title }}</span></div>
+    <div class="box"><span>{{ title }}</span><hr/></div>
   </div>
-  <div class="vl" v-if="rightBorder"></div>
 </template>
 
 <style lang="scss">
@@ -26,38 +22,47 @@ defineEmits(['linkExternal'])
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all .7s ease-in-out;
+  }
+
+  .tile:hover {
+    transition: all 1s ease-in-out;
   }
 
   .beige {
     color: beige;
+    background-color: var(--vt-c-beige-dark);
   }
 
   .beige:hover {
     background-color: beige;
-    transition: all 1.5s;
   }
 
   .red {
-    color: var(--vt-c-red-mute);
+    color: beige;
+    background-color: var(--vt-c-red-dark);
   }
 
   .red:hover {
-    background-color: var(--vt-c-red-mute);
-    transition: all 1.5s;
+    background-color: var(--vt-c-red-muted);
+  }
+
+  .mint {
+    color: beige;
+    background-color: var(--vt-c-mint-dark);
   }
 
   .mint:hover {
     background-color: var(--vt-c-mint-mute);
-    transition: all 1.5s;
   }
 
   .slate {
-    color: slategray;
+    color: beige;
+    background-color: var(--vt-c-slategrey-dark);
   }
 
   .slate:hover {
     background-color: slategray;
-    transition: all 1.5s;
   }
 
   @media(max-width: 1024px) {
@@ -72,14 +77,9 @@ defineEmits(['linkExternal'])
     }
   }
 
-  .vl {
-  height: 100%;
-  border-left: 1px solid var(--vt-c-divider-dark-1);
-  }
-
   .tile:hover > .box {
     color: black;
-    transition: all 1.5s linear;
+    transition: all 1s linear;
 
     &:after{
         margin-left:-50%;
@@ -94,16 +94,28 @@ defineEmits(['linkExternal'])
       }
   }
 
+  hr {
+    border-style: solid;
+    border-width: 1px;
+    border-color: beige;
+  }
+
+  .tile:hover > .box > hr {
+    transition: all .5s linear;
+    border-color: transparent;
+  }
+
   .box{
     display:flex;
+    flex-direction: column;
     position:relative;
     border-collapse:collapse;
     text-decoration:none;
     padding: 10px;
     justify-content: center;
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 40px;
     user-select: none;
+    font-family: "Courier New", monospace;
 
     &:before{
       transition: all 1s;

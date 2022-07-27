@@ -10,8 +10,14 @@
 
   --vt-c-mint: #4ad4a6;
   --vt-c-mint-mute: #4a977e;
+  --vt-c-mint-dark: rgba(74, 151, 127, 0.1);
+
   --vt-c-neon: rgb(23, 223, 230);
-  --vt-c-red-mute: rgb(124, 54, 54);
+  --vt-c-red-muted: rgb(124, 54, 54);
+  --vt-c-red-dark: rgba(124, 54, 54, 0.1);
+
+  --vt-c-beige-dark: rgba(245, 245, 220, 0.1);
+  --vt-c-slategry-dark: rgb(112, 128, 144), 0.1;
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
