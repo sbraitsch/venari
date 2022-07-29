@@ -1,4 +1,4 @@
-cd /root/projects/venari
+cd /home/admin/projects/venari
 git pull
 cd venari-ui
 npm install
