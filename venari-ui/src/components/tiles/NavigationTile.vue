@@ -14,7 +14,7 @@ defineEmits(['linkExternal'])
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
   .tile {
     display: flex;
     flex: 1;
@@ -106,47 +106,5 @@ defineEmits(['linkExternal'])
   .tile:hover > .box > hr {
     transition: all .5s linear;
     border-color: transparent;
-  }
-
-
-  .box{
-    display:flex;
-    flex-direction: column;
-    position:relative;
-    border-collapse:collapse;
-    text-decoration:none;
-    padding: 10px;
-    justify-content: center;
-    font-size: 40px;
-    user-select: none;
-    font-family: "Courier New", monospace;
-
-    &:before{
-      transition: all 1s;
-      position:absolute;
-      content:"";
-      width:100%;
-      height:0;
-      left:50%;
-      margin-left:-50%;
-      top:50%;
-      border-color:rgba(31, 175, 152,0);
-      border-style:solid;
-      border-width: 0 2px;
-    }
-
-    &:after{
-      transition: all 1s;
-      position:absolute;
-      content:"";
-      width: 0;
-      height:100%;
-      left:50%;
-      margin-left: 0;
-      top:0;
-      border-color:rgba(31, 175, 152,0);
-      border-style:solid;
-      border-width: 2px 0;
-    }
   }
 </style>

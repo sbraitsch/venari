@@ -12,14 +12,17 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "marked": "^4.0.18",
     "pinia": "^2.0.16",
     "sass": "^1.54.0",
     "vue": "^3.2.37",
+    "vue-dragscroll": "^4.0.3",
     "vue-router": "^4.1.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
     "@types/jsdom": "^16.2.14",
+    "@types/marked": "^4.0.3",
     "@types/node": "^16.11.45",
     "@vitejs/plugin-vue": "^3.0.1",
     "@vitejs/plugin-vue-jsx": "^2.0.0",
