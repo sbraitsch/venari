@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import TileView from '../components/tiles/HomeTiles.vue';
+import TileView from '../components/tiles/VenariTiles.vue';
 </script>
 
 <template>
   <div class="content">
-      <TileView/>
+    <TileView/>
   </div>
 </template>
 
@@ -19,5 +19,6 @@ import TileView from '../components/tiles/HomeTiles.vue';
     min-height: 100vh;
     width: 100vw;
     gap: 2vh;
+    background-color: beige;
 }
 </style>

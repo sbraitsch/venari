@@ -15,10 +15,8 @@ export default {
 
 <template>
   <div class="navbar">
-    <NavigationTile title="Venari" @link-external="$router.push('/venari')" color="beige"/>
-    <NavigationTile title="Pathology" @link-external="link('https://pathology.sbraitsch.dev')" color="mint"/>
-    <NavigationTile title="{dev.log}" @link-external="" color="red"/>
-    <NavigationTile title="GitHub" @link-external="link('https://github.com/Napfschnecke')" color="slate"/>
+    <NavigationTile title="CREATE|EDIT" @link-external="$router.push('/venari/create')" color="mint" theme="light"/>
+    <NavigationTile title="EXPLORE" @link-external="" color="slate" theme="light"/>
   </div>
 </template>
 

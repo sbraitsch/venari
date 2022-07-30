@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import Navbar from '../components/TileView.vue';
-import Api from './Api.vue';
+import HuntLayout from '../components/HuntLayout.vue';
 </script>
 
 <template>
-  <!-- <b class="neon constructionSign">Under Construction</b> -->
   <div class="content">
-    <Api></Api>
+    <HuntLayout/>
   </div>
 </template>
 
@@ -14,12 +12,12 @@ import Api from './Api.vue';
 
 .content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
     min-height: 100vh;
     width: 100vw;
-    gap: 2vh;
+    background-color: beige;
+    gap: 1vh;
 }
 </style>

@@ -1,16 +1,16 @@
 <script setup lang="ts">
-
-const props = defineProps({
+defineProps({
   title: String,
-    route: String,
-    color: String
+  route: String,
+  color: String,
+  theme: String
 })
 defineEmits(['linkExternal'])
 </script>
 
 <template>
   <div class="tile" :class="color" @click="$emit('linkExternal')">
-    <div class="box"><span>{{ title }}</span><hr/></div>
+    <div class="box" :class="theme"><span>{{ title }}</span><hr :class="theme"/></div>
   </div>
 </template>
 
@@ -23,6 +23,11 @@ defineEmits(['linkExternal'])
     align-items: center;
     cursor: pointer;
     transition: all .7s ease-in-out;
+  }
+
+  .light {
+    color: black;
+    border-color: black;
   }
 
   .tile:hover {
@@ -58,7 +63,7 @@ defineEmits(['linkExternal'])
 
   .slate {
     color: beige;
-    background-color: var(--vt-c-slategrey-dark);
+    background-color: var(--vt-c-slategray-dark);
   }
 
   .slate:hover {
@@ -95,15 +100,14 @@ defineEmits(['linkExternal'])
   }
 
   hr {
-    border-style: solid;
-    border-width: 1px;
-    border-color: beige;
+    border: 1px solid beige;
   }
 
   .tile:hover > .box > hr {
     transition: all .5s linear;
     border-color: transparent;
   }
+
 
   .box{
     display:flex;

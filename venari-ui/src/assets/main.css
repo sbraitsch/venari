@@ -25,6 +25,24 @@
     0 0 21px #fff;
 }
 
+.task {
+  text-align: center;
+  border: 2px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.description {
+  font-size: 15px;
+}
+
+.divider {
+  border: 1px solid black;
+  transition: all 1s linear;
+}
+
 @keyframes flicker {
   0%, 18%, 22%, 25%, 53%, 57%, 73%, 77%, 100% {
     text-shadow:
