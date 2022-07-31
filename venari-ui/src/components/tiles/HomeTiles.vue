@@ -8,10 +8,10 @@ const link = (url: string) => {
 
 <template>
   <div class="navbar">
-    <NavigationTile title="VENARI" @link-external="$router.push('/venari')" color="beige" theme="dark"/>
-    <NavigationTile title="CHEATSHEETS" @link-external="$router.push('/cheatsheet')" color="mint" theme="dark"/>
-    <NavigationTile title="{DEV.LOG}" @link-external="" color="red" theme="dark"/>
-    <NavigationTile title="GITHUB" @link-external="link('https://github.com/Napfschnecke')" color="slate" theme="dark"/>
+    <NavigationTile title="VENARI" icon="fa-solid fa-dungeon" @link-external="$router.push('/venari')" color="beige" theme="dark"/>
+    <NavigationTile title="CHEATSHEETS" icon="fa-solid fa-user-secret" @link-external="$router.push('/cheatsheet')" color="mint" theme="dark"/>
+    <NavigationTile title="DEV.LOG" icon="fa-solid fa-terminal" @link-external="" color="red" theme="dark"/>
+    <NavigationTile title="GITHUB" icon="fa-brands fa-github" @link-external="link('https://github.com/Napfschnecke')" color="slate" theme="dark"/>
   </div>
 </template>
 

@@ -3,14 +3,15 @@ defineProps({
   title: String,
   route: String,
   color: String,
-  theme: String
+  theme: String,
+  icon: String
 })
 defineEmits(['linkExternal'])
 </script>
 
 <template>
   <div class="tile" :class="color" @click="$emit('linkExternal')">
-    <div class="box" :class="theme"><span>{{ title }}</span><hr :class="theme"/></div>
+    <div class="box" :class="theme"><div><font-awesome-icon v-if="icon" :icon="icon"/> {{ title }}</div><hr :class="theme"/></div>
   </div>
 </template>
 
@@ -28,6 +29,16 @@ defineEmits(['linkExternal'])
   .light {
     color: black;
     border-color: black;
+  }
+
+  .venariColor {
+    color: beige;
+    background-color: var(--vt-c-red-muted);
+  }
+
+  .venariColor:hover {
+    background-color: beige;
+    color: black;
   }
 
   .tile:hover {

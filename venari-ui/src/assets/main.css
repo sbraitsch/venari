@@ -28,10 +28,11 @@
 .task {
   text-align: center;
   border: 2px solid black;
-  cursor: pointer;
   border-radius: 5px;
-  padding: 20px;
+  padding: 2vh;
   font-size: 20px;
+  background-color: var(--vt-c-red-muted);
+  color: beige;
 }
 
 .description {
@@ -41,6 +42,10 @@
 .divider {
   border: 1px solid black;
   transition: all 1s linear;
+}
+
+.clickable {
+  cursor:pointer;
 }
 
 @keyframes flicker {

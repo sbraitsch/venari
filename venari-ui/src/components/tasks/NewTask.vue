@@ -38,7 +38,7 @@ const type = ref("")
                 Sound
             </label>
         </div>
-        <div class="box" @click="$emit('addNewTask', title, description, type)">Add New<hr class="divider"/></div>
+        <div class="addBtn" @click="$emit('addNewTask', title, description, type)">Add New<hr class="divider"/></div>
     </div>
 </template>
 
@@ -56,38 +56,17 @@ const type = ref("")
 
     .form > label {
         text-align: left;
-        font-weight: bold;
         font-size: 18px;
     }
 
     .addBtn {
-        background-color: slategray;
-        border: none
+        font-size: 22px;
+        cursor: pointer;
     }
 
-    .box {
-        font-size: 20px;
-        font-weight: bold;
+    .addBtn:hover > hr {
+        transition: all .5s;
+        border-color: beige;
     }
 
-    .box:hover {
-        transition: all 1s linear;
-
-        &:after{
-            margin-left:-50%;
-            width: 100%;
-            border-color:black;
-        }
-
-        &:before{
-            top:0;
-            height: 100%;
-            border-color:black;
-        }
-  }
-
-  .box:hover > hr {
-    border-color: transparent;
-    transition: all 1s;
-  }
 </style>

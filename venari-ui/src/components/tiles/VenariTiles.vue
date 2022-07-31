@@ -15,8 +15,8 @@ export default {
 
 <template>
   <div class="navbar">
-    <NavigationTile title="CREATE|EDIT" @link-external="$router.push('/venari/create')" color="mint" theme="light"/>
-    <NavigationTile title="EXPLORE" @link-external="" color="slate" theme="light"/>
+    <NavigationTile title="CREATE|EDIT" icon="fa-solid fa-brain" @link-external="$router.push('/venari/create')" color="venariColor" />
+    <NavigationTile title="EXPLORE" icon="fa-brands fa-wpexplorer" @link-external="" color="venariColor"/>
   </div>
 </template>
 

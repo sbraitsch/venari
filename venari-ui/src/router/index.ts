@@ -26,7 +26,11 @@ const router = createRouter({
       path: '/venari/create',
       name: 'venariCreation',
       component: VenariCreationVue
-    }
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
+  }
   ]
 })
 

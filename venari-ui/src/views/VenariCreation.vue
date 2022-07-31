@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import HuntLayout from '../components/HuntLayout.vue';
+import VenariLayout from '../components/VenariConstructionLayout.vue';
 </script>
 
 <template>
   <div class="content">
-    <HuntLayout/>
+    <VenariLayout/>
   </div>
 </template>
 
@@ -13,11 +13,11 @@ import HuntLayout from '../components/HuntLayout.vue';
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
     background-color: beige;
     gap: 1vh;
+    overflow-y: scroll;
 }
 </style>
