@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import VenariHomeVue from '@/views/VenariHome.vue'
 import VenariCreationVue from '@/views/VenariCreation.vue'
 import CheatsheetVue from '@/views/Cheatsheet.vue'
+import PageNotFound from '@/views/PageNotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,7 +30,8 @@ const router = createRouter({
     },
     {
       path: '/:pathMatch(.*)*',
-      redirect: '/'
+      name: "NotFound",
+      component: PageNotFound
   }
   ]
 })
