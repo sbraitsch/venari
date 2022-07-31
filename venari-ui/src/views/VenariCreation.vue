@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import VenariLayout from '../components/VenariConstructionLayout.vue';
+import { useVenariStore } from '@/stores/venariStore'
+import ExportPreview from '../components/ExportPreview.vue'
+
+const store = useVenariStore()
+store.fetchVenari()
+
 </script>
 
 <template>
   <div class="content">
     <VenariLayout/>
+    <ExportPreview :json="JSON.stringify(store.venari, null, 2)"/>
   </div>
 </template>
 
@@ -12,12 +19,9 @@ import VenariLayout from '../components/VenariConstructionLayout.vue';
 
 .content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     height: 100vh;
-    width: 100vw;
     background-color: beige;
     gap: 1vh;
-    overflow-y: scroll;
 }
 </style>

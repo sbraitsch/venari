@@ -27,8 +27,6 @@
 
 .task {
   text-align: center;
-  border: 2px solid black;
-  border-radius: 5px;
   padding: 2vh;
   font-size: 20px;
   background-color: var(--vt-c-red-muted);
@@ -48,6 +46,28 @@
   cursor:pointer;
 }
 
+/* Scroll bar stylings */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--vt-c-red-dark); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--vt-c-red-muted); 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vt-c-red-highlight); 
+}
+
 @keyframes delayedFade {
   0% { opacity: 0; }
   50% { opacity: 0; }
@@ -56,6 +76,12 @@
 
 @keyframes basicFade {
   0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes delayedPop {
+  0% { opacity: 0; }
+  90% { opacity: 0; }
   100% { opacity: 1; }
 }
 
