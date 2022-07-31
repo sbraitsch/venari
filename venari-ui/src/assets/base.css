@@ -18,7 +18,11 @@
 
   --vt-c-beige-dark: rgba(245, 245, 220, 0.1);
   --vt-c-slategray-dark: rgba(76, 127, 175, 0.1);
-  --vt-c-slategray-muted: rgba(112, 128, 144, 0.4);
+  --vt-c-slategray-muted: rgba(112, 128, 144, 0.3);
+  --vt-c-slategray-mid: rgba(83, 121, 160, 0.527);
+
+  --vt-c-deepblue: rgba(20, 48, 75, 0.527);
+
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);

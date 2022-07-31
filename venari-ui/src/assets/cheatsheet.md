@@ -1,34 +1,33 @@
 # Linux
 ---
-Used Ports:<br>
-sudo lsof -i -P -n \| grep LISTEN<br><br>
-Running Processes:  
-ps -aux
-
+## Used Ports:
+### sudo lsof -i -P -n \| grep LISTEN
+## List Running Processes:  
+### ps -aux
 /split
-
 # Docker
 ---
- Kill all Containers:<br>
- docker kill $(docker ps -q)<br><br>
-
+## Kill all Containers:
+### docker kill $(docker ps -q)
 /split
-
-# Vue
----
-Emit /w Param:<br>
-defineEmits<{(e: 'nameOfEmit', p1: any, p2: any): void}>()<br><br>
-
-/split
-
-# Spring Boot
----
-Allow CORS:<br>
-@CrossOrigin(origins = ["source:port"])<br><br>
-
-/split 
-
 # CSS
 ---
-Flexbox Split:<br>
-margin-x: auto<br><br>
+## Flexbox Split:
+### margin-left: auto
+/split 
+# C#
+---
+## Traits:
+### public int Trait { get => this.property; set => this.property = value}
+## super() Equivalent:
+### public ClassName(string param) : base(param) {}
+/split
+# Spring Boot
+---
+## Allow CORS:<br>
+### @CrossOrigin(origins = ["source:port"])
+/split
+# Vue
+---
+## Emit /w Param:
+### defineEmits<{(e: 'nameOfEmit', p1: any, p2: any): void}>()

@@ -48,6 +48,17 @@
   cursor:pointer;
 }
 
+@keyframes delayedFade {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes basicFade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @keyframes flicker {
   0%, 18%, 22%, 25%, 53%, 57%, 73%, 77%, 100% {
     text-shadow:
