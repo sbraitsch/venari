@@ -10,7 +10,7 @@ import csharp from '../assets/cheatsheets/csharp.md?raw';
 import docker from '../assets/cheatsheets/docker.md?raw';
 
 const categories = [
-  { name: "Languages", sheets: [csharp, css] },
+  { name: "Languages", sheets: [csharp, css, css, css] },
   { name: "Frameworks", sheets: [vue, springboot] },
   { name: "Tools", sheets: [docker] },
   { name: "OS", sheets: [linux] },
@@ -73,8 +73,7 @@ const activeCategory = ref(0)
 .sheetContainer {
   display: flex;
   height: 100vh;
-  max-width: 100vw;
-  padding: 10px;
+  max-width: 98vw;
   gap: 1em;
   margin: auto;
   overflow: auto;
@@ -110,4 +109,13 @@ const activeCategory = ref(0)
   margin-left: 4em;
 }
 
+@media(max-width: 1024px) {
+
+  .categories {
+    width: 99vw;
+  }
+  .sheet {
+    width: 98vw;
+  }
+}
 </style>
