@@ -61,7 +61,7 @@ const activeCategory = ref(0)
 
 .category {
   padding: 10px;
-  font-size: 1.5em;
+  font-size: 1em;
   color: beige;
   cursor: pointer;
 }
@@ -98,14 +98,15 @@ const activeCategory = ref(0)
 }
 
 .sheet :deep(h1) {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .sheet :deep(h2) {
-  font-size: 1.5em;
+  font-size: 1em;
   margin-left: 2em;
 }
 .sheet :deep(h3) {
   color: var(--vt-c-lightblue);
+  font-size: 1em;
   margin-left: 4em;
 }
 
