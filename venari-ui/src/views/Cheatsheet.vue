@@ -10,7 +10,7 @@ import csharp from '../assets/cheatsheets/csharp.md?raw';
 import docker from '../assets/cheatsheets/docker.md?raw';
 
 const categories = [
-  { name: "Languages", sheets: [csharp, css, css, css] },
+  { name: "Languages", sheets: [csharp, css] },
   { name: "Frameworks", sheets: [vue, springboot] },
   { name: "Tools", sheets: [docker] },
   { name: "OS", sheets: [linux] },
@@ -113,6 +113,8 @@ const activeCategory = ref(0)
 
   .categories {
     width: 99vw;
+    gap: 0;
+    font-size: 12px;
   }
   .sheet {
     width: 98vw;
