@@ -1,25 +1,37 @@
 <script setup lang="ts">
 // @ts-ignore
 import { marked } from 'marked';
-import cheats from '../assets/cheatsheet.md?raw';
 import { ref } from 'vue'
+import linux from '../assets/cheatsheets/linux.md?raw';
+import css from '../assets/cheatsheets/css.md?raw';
+import vue from '../assets/cheatsheets/vue.md?raw';
+import springboot from '../assets/cheatsheets/springboot.md?raw';
+import csharp from '../assets/cheatsheets/csharp.md?raw';
+import docker from '../assets/cheatsheets/docker.md?raw';
 
-const sheets = cheats.split("/split").map((sheet) => sheet.substring(sheet.indexOf("#")))
-const active = ref(0)
-
+const categories = [
+  { name: "Languages", sheets: [csharp, css] },
+  { name: "Frameworks", sheets: [vue, springboot] },
+  { name: "Tools", sheets: [docker] },
+  { name: "OS", sheets: [linux] },
+  { name: "Other", sheets: [] }
+]
+const activeCategory = ref(0)
 </script>
 
 <template>
   <div class="content">
-    <div class="activeContent" v-html="marked(sheets[active])"></div>
-    <div class="inactiveContent">
-      <font-awesome-icon icon="fa-solid fa-archive"/> Archive
-      <div class="archive">
-        <div  v-for="(sheet, index) in sheets">
-          <div class="sheet" @click="active = index" :class="active == index && 'active'"><font-awesome-icon icon="fa-solid fa-file"/><span class="customSpan">{{ sheet.substring(sheet.indexOf(' '), sheet.indexOf('-')) }}</span></div>
+    <div class="categories">
+      <div v-for="(category, index) in categories">
+        <div class="category" @click="activeCategory = index" :class="activeCategory == index && 'selected'">
+          <font-awesome-icon icon="fa-solid fa-folder">2</font-awesome-icon>
+          {{ category.name }}
         </div>
       </div>
     </div>
+    <div class="sheetContainer" v-dragscroll>
+      <div v-for="sheet in categories[activeCategory].sheets" class="sheet" v-html="marked(sheet)" v-dragscroll></div>
+    </div>>
   </div>
 </template>
 
@@ -27,106 +39,74 @@ const active = ref(0)
 
 .content {
     display: flex;
-    width: 100vw;
-    padding: 10px;
-    align-items: flex-start;
+    flex-direction: column;
+    height: 100vh;
     gap: 1em;
-    overflow: hidden;
+    margin: auto;
+    overflow: auto;
 }
-.activeContent {
+
+.categories {
   display: flex;
-  flex-direction: column;
-  flex: 1;
-  height: 98vh;
-  text-align: left;
-  padding: 1vh;
-  color: beige;
-  background-color: var(--vt-c-deepblue);
-  animation: basicFade 1s ease;
-}
-
-.inactiveContent {
-  width: 5vw;
-  height: 98vh;
-  display: flex;
-  flex-direction: column;
-  padding: 1vh;
-  color: beige;
-  background-color: var(--vt-c-deepblue);
-  animation: basicFade 1s ease;
-  user-select: none;
-  transition: all .5s ease;
-  margin-left: auto;
-  text-align: center;
-}
-
-.inactiveContent:hover {
-  width: 15vw;
-  transition: all .5s ease;
-}
-
-.inactiveContent:hover > .archive {
-  opacity: 1;
-  transition: all .8s ease;
-}
-
-.inactiveContent:hover :deep(.customSpan) {
-  display: flex;
-  color: beige;
-  transition: all 1s ease;
-}
-
-.archive {
-  display: grid;
-  grid-template-columns: 1fr;
-  text-align: left;
-  margin: 1vh;
-  padding: 1vh;
-  gap: 1em;
-}
-
-.sheet {
-  display: flex;
-  gap: 1em;
-  justify-content: left;
+  justify-content: space-around;
   align-items: center;
-  padding: 1vh;
-  background-color: transparent;
-  color: beige;
-  font-size: 1.5em;
+  height: 50px;
+  width: 50vw;
+  margin: auto;
+  gap: 3vw;
+  background-color: var(--vt-c-deepblue);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
-.customSpan {
-  color: transparent;
-  white-space: nowrap;
-  transition: all .1s ease;
-}
-.sheet:hover {
-  transition: all .3s ease-in-out;
-  background-color: var(--vt-c-slategray-mid);
+.category {
+  padding: 10px;
+  font-size: 1.5em;
+  color: beige;
   cursor: pointer;
 }
 
-.active {
-  color: var(--vt-c-neon);
+.selected {
+  color: var(--vt-c-lightblue);
 }
 
-.activeContent :deep(hr) {
-  border: 1px solid beige;
-  margin-bottom: 20px;
+.sheetContainer {
+  display: flex;
+  height: 100vh;
+  max-width: 100vw;
+  padding: 10px;
+  gap: 1em;
+  margin: auto;
+  overflow: auto;
+}
+.sheet {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 30vw;
+  text-align: left;
+  padding: 1vh;
+  color: beige;
+  background-color: var(--vt-c-deepblue);
+  animation: basicFade 1s ease-in-out;
+  overflow: auto;
 }
 
-.activeContent :deep(h1) {
-  font-size: 40px;
+.sheet :deep(hr) {
+  border-bottom: 1px solid beige;
+  margin-bottom: 3vh;
 }
-.activeContent :deep(h2) {
-  font-size: 20px;
-  font-weight: bold;
+
+.sheet :deep(h1) {
+  font-size: 2em;
 }
-.activeContent :deep(h3) {
-  color: rgb(238, 138, 6);
+.sheet :deep(h2) {
+  font-size: 1.5em;
   margin-left: 2em;
-  font-weight: bold;
+}
+.sheet :deep(h3) {
+  color: var(--vt-c-lightblue);
+  margin-left: 4em;
 }
 
 </style>

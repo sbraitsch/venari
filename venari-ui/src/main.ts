@@ -14,12 +14,12 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faArrowUp, faArrowDown, faFileExport, faTerminal, faUserSecret, faDungeon, faPersonHiking, faMap, faBrain, faArchive, faFile} from '@fortawesome/free-solid-svg-icons'
+import { faArrowUp, faArrowDown, faFileExport, faTerminal, faUserSecret, faDungeon, faPersonHiking, faMap, faBrain, faArchive, faFile, faFolder} from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faWpexplorer } from '@fortawesome/free-brands-svg-icons'
 
 
 /* add icons to the library */
-library.add(faArrowUp, faArrowDown, faFileExport, faGithub, faTerminal, faUserSecret, faDungeon, faPersonHiking, faMap, faWpexplorer, faBrain, faArchive, faFile)
+library.add(faArrowUp, faArrowDown, faFileExport, faGithub, faTerminal, faUserSecret, faDungeon, faPersonHiking, faMap, faWpexplorer, faBrain, faArchive, faFile, faFolder)
 
 const app = createApp(App)
 

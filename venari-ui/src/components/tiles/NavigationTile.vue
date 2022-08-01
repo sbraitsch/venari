@@ -90,6 +90,7 @@ defineEmits(['linkExternal'])
     }
     .tile {
       width: 100%;
+      height: auto;
     }
   }
 
